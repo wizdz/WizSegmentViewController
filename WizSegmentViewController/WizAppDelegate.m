@@ -7,14 +7,25 @@
 //
 
 #import "WizAppDelegate.h"
+#import "WizSegmentViewController.h"
+#import "WizViewController.h"
 
 @implementation WizAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    WizViewController* vc1 = [[WizViewController alloc] init];
+    vc1.color = [UIColor redColor];
+    
+    WizViewController* vc2= [[WizViewController alloc ]init];
+    vc2.color = [UIColor blueColor];
+    
+    WizSegmentViewController* segmentController = [[WizSegmentViewController alloc] initWithChildViewController:@[vc1, vc2] titles:@[@"a",@"b"]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:segmentController];
     [self.window makeKeyAndVisible];
     return YES;
 }
