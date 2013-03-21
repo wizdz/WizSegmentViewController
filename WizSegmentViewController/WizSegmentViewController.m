@@ -122,6 +122,10 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -137,5 +141,4 @@
 	}
 	return YES;
 }
-
 @end
