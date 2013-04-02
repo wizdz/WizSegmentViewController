@@ -10,4 +10,5 @@
 
 @interface WizSegmentViewController : UIViewController
 - (id) initWithChildViewController:(NSArray*)viewControllers titles:(NSArray*)titles;
+- (void) setViewControllers:(NSArray*)vcs titles:(NSArray*)titles;
 @end

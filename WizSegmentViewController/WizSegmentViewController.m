@@ -26,6 +26,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        _seletedIndex = -1;
         // Custom initialization
     }
     return self;
