@@ -118,6 +118,8 @@
         self.segmentControl.segmentedControlStyle = UISegmentedControlStyleBar;
         [self.segmentControl addTarget:self action:@selector(segmentControlValueChanged:) forControlEvents:UIControlEventValueChanged];
         self.navigationItem.titleView = self.segmentControl;
+//        [self.segmentControl setContentOffset:CGSizeMake(5, 0) forSegmentAtIndex:0];
+//        [self.segmentControl setContentOffset:CGSizeMake(-5, 0) forSegmentAtIndex:[self.titles count]-1];
     }
     [self setSeletedIndex:0];
 	// Do any additional setup after loading the view.
